@@ -50,9 +50,9 @@
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
           offset += phase.durationInMinutes;
-          console.log(phase.name, correctedTime, offset % 60)
-          if (phase.name && notPassed(correctedTime, offset % 60)) {
-            console.log(phase.name, correctedTime, offset % 60)
+          console.log(phase.name, hour, minute)
+          if (phase.name && notPassed(hour, minute)) {
+            console.log(phase.name, 'ahora')
             // console.log(color(' ██', `Fg${phase.color}`), `${phase.name}: ${hour}:${minute} - ${formatDate(+hour, +minute + +phase.duration)} (${phase.duration}')`)
           }
         })
