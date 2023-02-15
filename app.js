@@ -42,7 +42,7 @@
       const html = []
       events.forEach(meta => {
         // Limpiar vacíos
-        meta.segments = meta.segments.filter(s => !s || !s.name)
+        meta.segments = meta.segments.filter(s => s && s.name)
         console.log(meta.segments)
         let current = meta.segments[0]
         let next = meta.segments[1]
