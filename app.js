@@ -51,12 +51,11 @@
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
           offset += phase.durationInMinutes;
-          if (phase.name) {
-            if (notPassed(hour, minute)) {
-              next = phase
-              current = phaseIndex >= 0 ? meta.segments[phaseIndex - 1] : meta.segments[meta.segments.length - 1]
-              next.time = `${hour}:${minute}`
-            }
+          if (notPassed(hour, minute)) {
+            next = phase
+            current = phaseIndex >= 0 ? meta.segments[phaseIndex - 1] : meta.segments[meta.segments.length - 1]
+            next.time = `${hour}:${minute}`
+            console.log(hour, minute)
           }
         })
         html.push(getMetaHtml(current, next))
