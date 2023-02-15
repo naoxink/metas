@@ -32,7 +32,8 @@
 
   const printMetas = async () => {
     const metas = await getMetas()
-    console.log(metas)
+    const currentTime = new Date()
+    const startHour = currentTime.getHours()
     const metasObj = metasByRegion(metas)
     for (region in metasObj) {
       const regions = metasObj[region]
