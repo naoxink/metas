@@ -45,7 +45,7 @@
         // console.log(`\n ${color(meta.name, 'Bright')}`)
         let current = null
         let next = null
-        meta.phases.forEach(function (phase, phaseIndex) {
+        meta.segments.forEach(function (phase, phaseIndex) {
           let correctedTime = "" + (startHour + (offset > 59 ? 1 : 0))
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
