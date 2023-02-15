@@ -1,0 +1,1 @@
+fetch('https://raw.githubusercontent.com/DanielScholte/GuildWars2Companion/master/assets/data/event_timers/meta_events.json').then(console.log)
