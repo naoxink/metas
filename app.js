@@ -50,9 +50,12 @@
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
           offset += phase.durationInMinutes;
-          console.log(phase.name, hour, minute)
-          if (phase.name && notPassed(hour, minute)) {
-            console.log(phase.name, 'ahora')
+          if (phase.name) {
+            if (notPassed(hour, minute)) {
+              next = phase
+              current = phaseIndex >= 0 ? meta.segments[phaseIndex - 1] : meta.segments[meta.segments.length - 1]
+            }
+            console.log(`current: ${current.name} | next: ${next.name}`)
             // console.log(color(' ██', `Fg${phase.color}`), `${phase.name}: ${hour}:${minute} - ${formatDate(+hour, +minute + +phase.duration)} (${phase.duration}')`)
           }
         })
