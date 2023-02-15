@@ -18,8 +18,8 @@
   </div>`
 
   const metasByRegion = metas => metas.reduce((acc, m) => {
-    if (!acc[m.Region]) {
-      acc[m.Region] = []
+    if (!acc[m.region]) {
+      acc[m.region] = []
     }
     acc[m.region].push(m)
     return acc
