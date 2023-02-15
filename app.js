@@ -29,6 +29,7 @@
 
   const printMetas = async () => {
     const metas = await getMetas()
+    console.log(metas)
     const metasObj = metasByRegion(metas)
     for (region in metasObj) {
       const regions = metasObj[region]
