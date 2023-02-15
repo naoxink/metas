@@ -43,8 +43,8 @@
       regions.forEach(meta => {
         const totalTime = meta.segments.reduce((acc, p) => acc += p.durationInMinutes, 0)
         // console.log(`\n ${color(meta.name, 'Bright')}`)
-        let current = null
-        let next = null
+        let current = meta.segments[0]
+        let next = meta.segments[1]
         meta.segments.forEach(function (phase, phaseIndex) {
           let correctedTime = "" + (startHour + (offset > 59 ? 1 : 0))
           const hour = ("00" + correctedTime).slice(-2)
@@ -58,8 +58,8 @@
             // console.log(color(' ██', `Fg${phase.color}`), `${phase.name}: ${hour}:${minute} - ${formatDate(+hour, +minute + +phase.duration)} (${phase.duration}')`)
           }
         })
+        console.log(`current: ${current.name} | next: ${next.name}`)
       })
-      console.log(`current: ${current.name} | next: ${next.name}`)
     }
   }
 
