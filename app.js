@@ -7,9 +7,9 @@
     return metas
   }
 
-  const getMetaHtml = data => `<div class="meta-container">
-    <p class="current"></p>
-    <p class="next"></p>
+  const getMetaHtml = (current, next) => `<div class="meta-container">
+    <p class="current">${current.name}</p>
+    <p class="next">${next.name} [${next.time}]</p>
   </div>`;
 
   const getRegionContainer = (title, innerHTML) => `<div class="region>
@@ -36,12 +36,12 @@
     const startHour = currentTime.getHours()
     const metasObj = metasByRegion(metas)
     for (region in metasObj) {
-      const regions = metasObj[region]
+      const events = metasObj[region]
       let offset = 0
       // console.log(`\n\n ${color(region, 'Bright')}`)
       // console.log('═'.repeat(totalWidth))
-      regions.forEach(meta => {
-        const totalTime = meta.segments.reduce((acc, p) => acc += p.durationInMinutes, 0)
+      events.forEach(meta => {
+        const html = []
         // console.log(`\n ${color(meta.name, 'Bright')}`)
         let current = meta.segments[0]
         let next = meta.segments[1]
@@ -54,12 +54,13 @@
             if (notPassed(hour, minute)) {
               next = phase
               current = phaseIndex >= 0 ? meta.segments[phaseIndex - 1] : meta.segments[meta.segments.length - 1]
+              next.time = `${hour}:${minute}`
             }
-            // console.log(color(' ██', `Fg${phase.color}`), `${phase.name}: ${hour}:${minute} - ${formatDate(+hour, +minute + +phase.duration)} (${phase.duration}')`)
           }
         })
-        console.log(`current: ${current.name} | next: ${next.name}`)
+        html.push(getMetaHtml(current, next))
       })
+      document.querySelector('#content').innerHTML += html.join('')
     }
   }
 
