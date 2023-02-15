@@ -8,8 +8,8 @@
   }
 
   const getMetaHtml = (current, next) => `<div class="meta-container">
-    <p class="current">${current.name}</p>
-    <p class="next">${next.name} [${next.time}]</p>
+    <p class="current">${current && current.name ? current.name : ''}</p>
+    <p class="next">${next && next.name ? next.name : ''} [${next && next.time ? next.time : ''}]</p>
   </div>`;
 
   const getRegionContainer = (title, innerHTML) => `<div class="region>
@@ -43,7 +43,6 @@
       events.forEach(meta => {
         // Limpiar vacíos
         meta.segments = meta.segments.filter(s => s && s.name)
-        console.log(meta.segments)
         let current = meta.segments[0]
         let next = meta.segments[1]
         meta.segments.forEach(function (phase, phaseIndex) {
