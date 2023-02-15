@@ -41,11 +41,10 @@
 
       const html = []
       events.forEach(meta => {
-        // console.log(`\n ${color(meta.name, 'Bright')}`)
-        let current = meta.segments[0]
-        let next = meta.segments[1]
         // Limpiar vacíos
         meta.segments = meta.segments.filter(s => !s || !s.name)
+        let current = meta.segments[0]
+        let next = meta.segments[1]
         meta.segments.forEach(function (phase, phaseIndex) {
           let correctedTime = "" + (startHour + (offset > 59 ? 1 : 0))
           const hour = ("00" + correctedTime).slice(-2)
