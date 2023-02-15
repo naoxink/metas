@@ -2,7 +2,9 @@
 
   const getMetas = async () => {
     const res = await fetch('https://raw.githubusercontent.com/DanielScholte/GuildWars2Companion/master/assets/data/event_timers/meta_events.json')
-    return await res.json()
+    const metas = await res.json()
+    console.log(metas)
+    return metas
   }
 
   const getMetaHtml = data => `<div class="meta-container">
