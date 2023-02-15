@@ -28,7 +28,8 @@
   }
 
   const printMetas = async () => {
-    const metasObj = await getMetas()
+    const metas = await getMetas()
+    const metasObj = metasByRegion(metas)
     for (region in metasObj) {
       const regions = metasObj[region]
       let offset = 0
