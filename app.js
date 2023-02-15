@@ -37,12 +37,11 @@
     const metasObj = metasByRegion(metas)
     for (region in metasObj) {
       const regions = metasObj[region]
-      console.log(regions, region)
       let offset = 0
       // console.log(`\n\n ${color(region, 'Bright')}`)
       // console.log('═'.repeat(totalWidth))
       regions.forEach(meta => {
-        const totalTime = meta.segments.reduce((acc, p) => acc += p.duration, 0)
+        const totalTime = meta.segments.reduce((acc, p) => acc += p.durationInMinutes, 0)
         // console.log(`\n ${color(meta.name, 'Bright')}`)
         let current = null
         let next = null
@@ -50,7 +49,8 @@
           let correctedTime = "" + (startHour + (offset > 59 ? 1 : 0))
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
-          offset += phase.duration;
+          offset += phase.durationInMinutes;
+          console.log(phase.name, correctedTime, offset % 60)
           if (phase.name && notPassed(correctedTime, offset % 60)) {
             console.log(phase.name, correctedTime, offset % 60)
             // console.log(color(' ██', `Fg${phase.color}`), `${phase.name}: ${hour}:${minute} - ${formatDate(+hour, +minute + +phase.duration)} (${phase.duration}')`)
