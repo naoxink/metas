@@ -43,7 +43,7 @@
       events.forEach(meta => {
         // Limpiar vacíos
         meta.segments = meta.segments.filter(s => !s || !s.name)
-        console.log(segments)
+        console.log(meta.segments)
         let current = meta.segments[0]
         let next = meta.segments[1]
         meta.segments.forEach(function (phase, phaseIndex) {
