@@ -40,8 +40,8 @@
       let offset = 0
       // console.log(`\n\n ${color(region, 'Bright')}`)
       // console.log('═'.repeat(totalWidth))
+      const html = []
       events.forEach(meta => {
-        const html = []
         // console.log(`\n ${color(meta.name, 'Bright')}`)
         let current = meta.segments[0]
         let next = meta.segments[1]
