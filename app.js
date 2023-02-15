@@ -55,11 +55,11 @@
               next = phase
               current = phaseIndex >= 0 ? meta.segments[phaseIndex - 1] : meta.segments[meta.segments.length - 1]
             }
-            console.log(`current: ${current.name} | next: ${next.name}`)
             // console.log(color(' ██', `Fg${phase.color}`), `${phase.name}: ${hour}:${minute} - ${formatDate(+hour, +minute + +phase.duration)} (${phase.duration}')`)
           }
         })
       })
+      console.log(`current: ${current.name} | next: ${next.name}`)
     }
   }
 
