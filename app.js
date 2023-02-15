@@ -36,6 +36,7 @@
     const metasObj = metasByRegion(metas)
     for (region in metasObj) {
       const regions = metasObj[region]
+      console.log(regions, region)
       let offset = 0
       // console.log(`\n\n ${color(region, 'Bright')}`)
       // console.log('═'.repeat(totalWidth))
