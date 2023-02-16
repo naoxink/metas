@@ -31,6 +31,7 @@
   }
 
   const printMetas = async () => {
+    document.querySelector('#content').innerHTML = ''
     const metas = await getMetas()
     const currentTime = new Date()
     const startHour = currentTime.getHours()
