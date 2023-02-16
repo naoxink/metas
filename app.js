@@ -9,12 +9,12 @@
   const getMetaHtml = (mapName, current, next) => `<div class="meta-container">
     <p><strong>${mapName}</strong></p>
     <p class="current">
-      Current: ${current && current.name ? current.name : ''}
-      <div><small>${current && current.time ? current.time : ''}</small></div>
+      Current: ${current && current.name ? current.name : ''}<br>
+      <small>${current && current.time ? current.time : ''}</small>
     </p>
     <p class="next">
-      Next: ${next && next.name ? next.name : ''}
-      <div><small>${next && next.time ? next.time : ''}</small></div>
+      Next: ${next && next.name ? next.name : ''}<br>
+      <small>${next && next.time ? next.time : ''}</small>
     </p>
   </div>`;
 
@@ -78,7 +78,7 @@
       regionsHtml.push(getRegionContainer(region, html.join('')))
     }
     document.querySelector('#content').innerHTML = regionsHtml.join('')
-    setTimeout(printMetas, 1000)
+    // setTimeout(printMetas, 1000)
   }
 
   await printMetas()
