@@ -1,15 +1,16 @@
 p.current {
   background-color: darkseagreen;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, .2);
 }
 
 p.next {
   background-color: floralwhite;
+  border: 1px solid rgba(0, 0, 0, .2);
 }
 
-.meta-container>p {
+.meta-container > p {
   display: inline-block;
-  border: 1px solid rgba(0, 0, 0, .2);
   padding: 10px 15px;
   margin: 10px 0;
 }
