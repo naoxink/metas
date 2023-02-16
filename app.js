@@ -52,14 +52,13 @@
         let current = map.segments[0]
         let next = map.segments[1]
         map.segments.forEach(function (phase, phaseIndex) {
-          console.log(phase.name, phase.durationInMinutes, offset)
           let correctedTime = "" + (startHour + (offset > 59 ? 1 : 0))
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
           offset += phase.durationInMinutes
           if (notPassed(hour, minute)) {
             next = phase
-            current = phaseIndex > 0 ? map.segments[phaseIndex - 1] : map.segments[map.segments.length - 1]
+            current = phaseIndex === phases.length ? map.segments[0] : map.segments[map.segments.length + 1]
             next.time = `${hour}:${minute}`
           }
         })
