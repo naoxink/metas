@@ -25,7 +25,7 @@
     return acc
   }, {})
 
-  const notPassed = (hour, minute) => {
+  const passed = (hour, minute) => {
     const currentTime = new Date()
     return +hour > currentTime.getHours() || (+hour === currentTime.getHours() && +minute > currentTime.getMinutes())
   }
@@ -57,7 +57,7 @@
           const minute = ("00" + (offset % 60)).slice(-2)
           offset += phase.durationInMinutes
           console.log(`Fase: ${phase.name} | Hora: ${hour}:${minute} | Duración: ${phase.durationInMinutes}`)
-          if (notPassed(hour, minute)) {
+          if (!passed(hour, minute)) {
             next = phase
             current = phaseIndex === 0 ? map.segments[map.segments.length - 1] : map.segments[phaseIndex - 1]
             next.time = `${hour}:${minute}`
@@ -68,7 +68,7 @@
       regionsHtml.push(getRegionContainer(region, html.join('')))
     }
     document.querySelector('#content').innerHTML = regionsHtml.join('')
-    setTimeout(printMetas, 1000)
+    // setTimeout(printMetas, 1000)
   }
 
   await printMetas()
