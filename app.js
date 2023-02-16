@@ -62,8 +62,10 @@
             current.time = `${hour}:${minute}`
 
             next = phaseIndex === map.segments.length - 1 ? map.segments[0] : map.segments[phaseIndex + 1]
-            let nextOffset = offset + next.durationInMinutes
-            next.time = `${(startHour + (nextOffset > 59 ? 1 : 0))}:${(nextOffset) % 60}`
+            const nextOffset = offset
+            const nextHour = ("00" + startHour + (nextOffset > 59 ? 1 : 0)).slice(-2)
+            const nextMinute = ("00" + nextOffset % 60).slice(-2)
+            next.time = `${nextHour}:${nextMinute}`
           }
         })
         html.push(getMetaHtml(map.name, current, next))
