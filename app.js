@@ -57,12 +57,11 @@
           const minute = ("00" + (offset % 60)).slice(-2)
           offset += phase.durationInMinutes
           console.log(`Fase: ${phase.name} | Hora: ${hour}:${minute} | Duración: ${phase.durationInMinutes}`)
-          if (!passed(hour, minute)) {
-            next = phase
-            current = phaseIndex === 0 ? map.segments[map.segments.length - 1] : map.segments[phaseIndex - 1]
-
-            next.time = `${hour}:${minute}`
-            current.time = `${(startHour - (offset > 59 ? 1 : 0))}:${minute}`
+          if (passed(hour, minute)) {
+            next = phaseIndex === map.segments.length - 1 ? map.segments[0] : map.segments[phaseIndex + 1]
+            current = phase
+            current.time = `${hour}:${minute}`
+            next.time = `${(startHour + (offset > 59 ? 1 : 0))}:${minute}`
           }
         })
         html.push(getMetaHtml(map.name, current, next))
