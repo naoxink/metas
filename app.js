@@ -58,7 +58,7 @@
           offset += phase.durationInMinutes
           if (notPassed(hour, minute)) {
             next = phase
-            current = phaseIndex === phases.length ? map.segments[0] : map.segments[map.segments.length + 1]
+            current = phaseIndex === map.segments.length ? map.segments[0] : map.segments[map.segments.length + 1]
             next.time = `${hour}:${minute}`
           }
         })
