@@ -27,7 +27,7 @@
 
   const notPassed = (hour, minute) => {
     const currentTime = new Date()
-    return +hour > currentTime.getHours() || (+hour <= currentTime.getHours() && +minute > currentTime.getMinutes())
+    return +hour > currentTime.getHours() || (+hour === currentTime.getHours() && +minute > currentTime.getMinutes())
   }
 
   const printMetas = async () => {
