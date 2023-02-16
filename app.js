@@ -3,7 +3,6 @@
   const getMetas = async () => {
     const res = await fetch('https://raw.githubusercontent.com/DanielScholte/GuildWars2Companion/master/assets/data/event_timers/meta_events.json')
     const metas = await res.json()
-    console.log(metas)
     return metas
   }
 
@@ -60,7 +59,6 @@
             next = phase
             current = phaseIndex > 0 ? meta.segments[phaseIndex - 1] : meta.segments[meta.segments.length - 1]
             next.time = `${hour}:${minute}`
-            console.log(hour, minute)
           }
         })
         html.push(getMetaHtml(current, next))
