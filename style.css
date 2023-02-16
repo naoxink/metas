@@ -1,0 +1,20 @@
+p.current {
+  background-color: darkseagreen;
+  font-weight: bold;
+}
+
+p.next {
+  background-color: floralwhite;
+}
+
+.meta-container > p {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, .2);
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+#content {
+  font-family: sans-serif;
+  color: #333;
+}

@@ -35,14 +35,20 @@
     const currentTime = new Date()
     const startHour = currentTime.getHours()
     const metasObj = metasByRegion(metas)
+    const regionsHtml = []
     for (region in metasObj) {
       const events = metasObj[region]
       let offset = 0
 
       const html = []
       events.forEach(meta => {
-        // Limpiar vacíos
-        meta.segments = meta.segments.filter(s => s && s.name)
+        // Rellenar nombre de vacíos
+        meta.segments = meta.segments.map(s => {
+          if (!s.name) {
+            s.name = '- Standby -'
+          }
+          return s
+        })
         let current = meta.segments[0]
         let next = meta.segments[1]
         meta.segments.forEach(function (phase, phaseIndex) {
@@ -52,15 +58,16 @@
           offset += phase.durationInMinutes;
           if (notPassed(hour, minute)) {
             next = phase
-            current = phaseIndex >= 0 ? meta.segments[phaseIndex - 1] : meta.segments[meta.segments.length - 1]
+            current = phaseIndex > 0 ? meta.segments[phaseIndex - 1] : meta.segments[meta.segments.length - 1]
             next.time = `${hour}:${minute}`
             console.log(hour, minute)
           }
         })
         html.push(getMetaHtml(current, next))
       })
-      document.querySelector('#content').innerHTML += html.join('')
+      regionsHtml.push(getRegionContainer(region, html.join('')))
     }
+    document.querySelector('#content').innerHTML += regionsHtml.join('')
   }
 
   await printMetas()
