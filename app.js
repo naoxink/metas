@@ -78,7 +78,7 @@
       regionsHtml.push(getRegionContainer(region, html.join('')))
     }
     document.querySelector('#content').innerHTML = regionsHtml.join('')
-    // setTimeout(printMetas, 1000)
+    setTimeout(printMetas, 1000)
   }
 
   await printMetas()
