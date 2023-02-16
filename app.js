@@ -31,7 +31,6 @@
   }
 
   const printMetas = async () => {
-    document.querySelector('#content').innerHTML = ''
     const metas = await getMetas()
     const currentTime = new Date()
     const startHour = currentTime.getHours()
@@ -68,7 +67,7 @@
       })
       regionsHtml.push(getRegionContainer(region, html.join('')))
     }
-    document.querySelector('#content').innerHTML += regionsHtml.join('')
+    document.querySelector('#content').innerHTML = regionsHtml.join('')
     setTimeout(printMetas, 1000)
   }
 
