@@ -9,7 +9,7 @@ p.next {
   border: 1px solid rgba(0, 0, 0, .2);
 }
 
-.meta-container > p {
+.meta-container>p {
   display: inline-block;
   padding: 10px 15px;
   margin: 10px 0;
@@ -22,6 +22,7 @@ p.next {
   margin: 0 auto;
   display: inline-block;
   text-align: left;
+  min-width: 60%;
 }
 
 body {

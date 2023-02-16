@@ -9,12 +9,12 @@
   const getMetaHtml = (mapName, current, next) => `<div class="meta-container">
     <p><strong>${mapName}</strong></p>
     <p class="current">
-      Current: ${current && current.name ? current.name : ''}<br>
-      <small>${current && current.time ? current.time : ''}</small>
+      ${current && current.name ? current.name : ''}<br>
+      <small>Started at: ${current && current.time ? current.time : ''}</small>
     </p>
     <p class="next">
-      Next: ${next && next.name ? next.name : ''}<br>
-      <small>${next && next.time ? next.time : ''}</small>
+      ${next && next.name ? next.name : ''}<br>
+      <small>Starts at: ${next && next.time ? next.time : ''}</small>
     </p>
   </div>`;
 
