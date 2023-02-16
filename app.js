@@ -8,8 +8,14 @@
 
   const getMetaHtml = (mapName, current, next) => `<div class="meta-container">
     <p><strong>${mapName}</strong></p>
-    <p class="current">Current: ${current && current.name ? current.name : ''} [${current && current.time ? current.time : ''}]</p>
-    <p class="next">Next: ${next && next.name ? next.name : ''} [${next && next.time ? next.time : ''}]</p>
+    <p class="current">
+      Current: ${current && current.name ? current.name : ''}
+      <div><small>${current && current.time ? current.time : ''}</small></div>
+    </p>
+    <p class="next">
+      Next: ${next && next.name ? next.name : ''}
+      <div><small>${next && next.time ? next.time : ''}</small></div>
+    </p>
   </div>`;
 
   const getRegionContainer = (title, innerHTML) => `<div class="region">
