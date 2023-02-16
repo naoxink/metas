@@ -8,8 +8,8 @@
   }
 
   const getMetaHtml = (current, next) => `<div class="meta-container">
-    <p class="current">${current && current.name ? current.name : ''}</p>
-    <p class="next">${next && next.name ? next.name : ''} [${next && next.time ? next.time : ''}]</p>
+    <p class="current">Current: ${current && current.name ? current.name : ''}</p>
+    <p class="next">Next: ${next && next.name ? next.name : ''} [${next && next.time ? next.time : ''}]</p>
   </div>`;
 
   const getRegionContainer = (title, innerHTML) => `<div class="region">
