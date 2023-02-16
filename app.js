@@ -6,7 +6,8 @@
     return metas
   }
 
-  const getMetaHtml = (current, next) => `<div class="meta-container">
+  const getMetaHtml = (mapName, current, next) => `<div class="meta-container">
+    <p><strong>${mapName}</strong></p>
     <p class="current">Current: ${current && current.name ? current.name : ''}</p>
     <p class="next">Next: ${next && next.name ? next.name : ''} [${next && next.time ? next.time : ''}]</p>
   </div>`;
@@ -36,32 +37,32 @@
     const metasObj = metasByRegion(metas)
     const regionsHtml = []
     for (region in metasObj) {
-      const events = metasObj[region]
+      const maps = metasObj[region]
       let offset = 0
 
       const html = []
-      events.forEach(meta => {
+      maps.forEach(map => {
         // Rellenar nombre de vacíos
-        meta.segments = meta.segments.map(s => {
+        map.segments = map.segments.map(s => {
           if (!s.name) {
             s.name = '- Standby -'
           }
           return s
         })
-        let current = meta.segments[0]
-        let next = meta.segments[1]
-        meta.segments.forEach(function (phase, phaseIndex) {
+        let current = map.segments[0]
+        let next = map.segments[1]
+        map.segments.forEach(function (phase, phaseIndex) {
           let correctedTime = "" + (startHour + (offset > 59 ? 1 : 0))
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
           offset += phase.durationInMinutes;
           if (notPassed(hour, minute)) {
             next = phase
-            current = phaseIndex > 0 ? meta.segments[phaseIndex - 1] : meta.segments[meta.segments.length - 1]
+            current = phaseIndex > 0 ? map.segments[phaseIndex - 1] : meta.segments[map.segments.length - 1]
             next.time = `${hour}:${minute}`
           }
         })
-        html.push(getMetaHtml(current, next))
+        html.push(getMetaHtml(map.name, current, next))
       })
       regionsHtml.push(getRegionContainer(region, html.join('')))
     }
