@@ -9,7 +9,15 @@ p.next {
   border: 1px solid rgba(0, 0, 0, .2);
 }
 
-.meta-container>p {
+.meta-container p:first-child {
+  text-align: right;
+}
+
+h3 {
+  text-align: center;
+}
+
+.meta-container > p {
   display: inline-block;
   padding: 10px 15px;
   margin: 10px 0;
