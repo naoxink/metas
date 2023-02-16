@@ -56,7 +56,6 @@
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
           offset += phase.durationInMinutes
-          console.log(`Fase: ${phase.name} | Hora: ${hour}:${minute} | Duración: ${phase.durationInMinutes}`)
           if (!passed(hour, minute)) {
             current = phase
             current.time = `${hour}:${minute}`
