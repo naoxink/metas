@@ -60,6 +60,8 @@
             next = phase
             current = phaseIndex === 0 ? map.segments[map.segments.length - 1] : map.segments[phaseIndex - 1]
             next.time = `${hour}:${minute}`
+          }else{
+            html.push(getMetaHtml(map.name, phase, null))
           }
         })
         html.push(getMetaHtml(map.name, current, next))
