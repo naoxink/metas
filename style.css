@@ -7,7 +7,7 @@ p.next {
   background-color: floralwhite;
 }
 
-.meta-container > p {
+.meta-container>p {
   display: inline-block;
   border: 1px solid rgba(0, 0, 0, .2);
   padding: 10px 15px;
@@ -17,4 +17,11 @@ p.next {
 #content {
   font-family: sans-serif;
   color: #333;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+body {
+  text-align: center;
 }
