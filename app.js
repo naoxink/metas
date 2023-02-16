@@ -12,7 +12,7 @@
     <p class="next">${next && next.name ? next.name : ''} [${next && next.time ? next.time : ''}]</p>
   </div>`;
 
-  const getRegionContainer = (title, innerHTML) => `<div class="region>
+  const getRegionContainer = (title, innerHTML) => `<div class="region">
     <h3>${title}</h3>
     ${innerHTML}
   </div>`
