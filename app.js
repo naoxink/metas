@@ -8,7 +8,7 @@
 
   const getMetaHtml = (mapName, current, next) => `<div class="meta-container">
     <p><strong>${mapName}</strong></p>
-    <p class="current">Current: ${current && current.name ? current.name : ''}</p>
+    <p class="current">Current: ${current && current.name ? current.name : ''} [${current && current.time ? current.time : ''}]</p>
     <p class="next">Next: ${next && next.name ? next.name : ''} [${next && next.time ? next.time : ''}]</p>
   </div>`;
 
@@ -60,7 +60,9 @@
           if (!passed(hour, minute)) {
             next = phase
             current = phaseIndex === 0 ? map.segments[map.segments.length - 1] : map.segments[phaseIndex - 1]
+
             next.time = `${hour}:${minute}`
+            current.time = `${(startHour - (offset > 59 ? 1 : 0))}:${minute}`
           }
         })
         html.push(getMetaHtml(map.name, current, next))
