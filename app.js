@@ -52,6 +52,7 @@
         let current = map.segments[0]
         let next = map.segments[1]
         map.segments.forEach(function (phase, phaseIndex) {
+          console.log(phase.name, phase.durationInMinutes, offset)
           let correctedTime = "" + (startHour + (offset > 59 ? 1 : 0))
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
