@@ -58,7 +58,7 @@
           offset += phase.durationInMinutes;
           if (notPassed(hour, minute)) {
             next = phase
-            current = phaseIndex > 0 ? map.segments[phaseIndex - 1] : meta.segments[map.segments.length - 1]
+            current = phaseIndex > 0 ? map.segments[phaseIndex - 1] : map.segments[map.segments.length - 1]
             next.time = `${hour}:${minute}`
           }
         })
