@@ -58,6 +58,7 @@
           }
           return s
         })
+        map.segments.reverse()
         let current = map.segments[0]
         let next = map.segments[1]
         map.segments.forEach(function (phase, phaseIndex) {
