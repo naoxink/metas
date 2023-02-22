@@ -48,9 +48,6 @@
       const html = []
       maps.forEach(map => {
         let offset = 0
-        if (map.offsetInMinutes) {
-          offset += map.offsetInMinutes
-        }
 
         // Rellenar nombre de vacíos
         map.segments = map.segments.map(s => {
@@ -73,6 +70,9 @@
             current.time = `${hour}:${minute}`
 
             next = phaseIndex === map.segments.length - 1 ? map.segments[0] : map.segments[phaseIndex + 1]
+            if (phaseIndex === map.segments.length - 1) {
+              offset += map.offsetInMinutes
+            }
             const nextOffset = offset
             const nextHour = ("00" + (startHour + (nextOffset > 59 ? 1 : 0))).slice(-2)
             const nextMinute = ("00" + nextOffset % 60).slice(-2)
