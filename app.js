@@ -47,6 +47,7 @@
 
       const html = []
       maps.forEach(map => {
+        console.log('----------------------------------------------------')
         let offset = 0
         if (map.offsetInMinutes) {
           offset += map.offsetInMinutes
