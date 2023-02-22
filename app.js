@@ -60,9 +60,9 @@
         let current = map.segments[0]
         let next = null // map.segments[1]
         map.segments.reverse().forEach(function (phase, phaseIndex) {
-          if (offset > 59) {
-            offset += map.offsetInMinutes
-          }
+          // if (offset > 59) {
+          offset += map.offsetInMinutes
+          // }
           let correctedTime = "" + (startHour + (offset > 59 ? 1 : 0))
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
