@@ -73,14 +73,11 @@
             current = phase
             current.time = `${hour}:${minute}`
 
-            next = phaseIndex === map.segments.length - 1 ? map.segments[0] : map.segments[phaseIndex + 1]
-            const nextOffset = offset
-            const nextHour = ("00" + (startHour + (nextOffset > 59 ? 1 : 0))).slice(-2)
-            const nextMinute = ("00" + nextOffset % 60).slice(-2)
-            next.time = `${nextHour}:${nextMinute}`
-          }
-          if (map.offsetInMinutes) {
-            offset += map.offsetInMinutes
+            // next = phaseIndex === map.segments.length - 1 ? map.segments[0] : map.segments[phaseIndex + 1]
+            // const nextOffset = offset
+            // const nextHour = ("00" + (startHour + (nextOffset > 59 ? 1 : 0))).slice(-2)
+            // const nextMinute = ("00" + nextOffset % 60).slice(-2)
+            // next.time = `${nextHour}:${nextMinute}`
           }
         })
         html.push(getMetaHtml(map.name, current, next))
