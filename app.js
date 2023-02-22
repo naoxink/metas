@@ -48,9 +48,9 @@
       const html = []
       maps.forEach(map => {
         let offset = 0
-        // if (map.offsetInMinutes) {
-        //   offset += map.offsetInMinutes
-        // }
+        if (map.offsetInMinutes) {
+          offset += map.offsetInMinutes
+        }
 
         // Rellenar nombre de vacíos
         map.segments = map.segments.map(s => {
