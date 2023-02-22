@@ -61,7 +61,7 @@
           let correctedTime = "" + (startHour + (offset > 59 ? 1 : 0))
           const hour = ("00" + correctedTime).slice(-2)
           const minute = ("00" + (offset % 60)).slice(-2)
-          console.log(`${phase.name} @ ${hour}:${minute}`)
+          console.log(`${phase.name} @ ${hour}:${minute} | duration: ${phase.durationInMinutes} | offset: ${offset}`)
           offset += phase.durationInMinutes
           if (!passed(hour, minute)) {
             current = phase
