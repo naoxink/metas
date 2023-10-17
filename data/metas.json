@@ -38,7 +38,7 @@
                 "name": "",
                 "duration": 5,
                 "color": "transparent"
-            },
+            }
         ]
     },
     {
@@ -444,7 +444,7 @@
                 "name": "Batalla por el mar de jade",
                 "duration": 60,
                 "color": "yellow"
-            },
+            }
         ]
     },
     {
@@ -507,7 +507,7 @@
                 "name": "",
                 "duration": 35,
                 "color": "transparent"
-            },
+            }
         ]
     },
 ]
