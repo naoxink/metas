@@ -416,6 +416,11 @@
         "name": "Dragon's end",
         "phases": [
             {
+                "name": "Batalla por el mar de jade",
+                "duration": 60,
+                "color": "yellow"
+            },
+            {
                 "name": "Preparaciones",
                 "duration": 5,
                 "color": "blue"
@@ -439,11 +444,6 @@
                 "name": "Preparaciones",
                 "duration": 7,
                 "color": "blue"
-            },
-            {
-                "name": "Batalla por el mar de jade",
-                "duration": 60,
-                "color": "yellow"
             }
         ]
     },
@@ -498,6 +498,11 @@
         "category": "Secrets of the Obscure",
         "name": "Amnytas",
         "phases": [
+            {
+                "name": "",
+                "duration": 60,
+                "color": "transparent"
+            },
             {
                 "name": "Defense of Amnytas",
                 "duration": 25,
