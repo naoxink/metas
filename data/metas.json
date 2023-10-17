@@ -468,24 +468,24 @@
         "name": "Wizard's Tower",
         "phases": [
             {
+                "name": "Target Practice",
+                "duration": 40,
+                "color": "transparent"
+            },
+            {
+                "name": "Target Practice & Fly by night",
+                "duration": 15,
+                "color": "yellow"
+            },
+            {
                 "name": "Fly by night",
-                "duration": 20,
+                "duration": 25,
                 "color": "yellow"
             },
             {
                 "name": "",
                 "duration": 40,
                 "color": "transparent"
-            },
-            {
-                "name": "Target Practice",
-                "duration": 40,
-                "color": "transparent"
-            },
-            {
-                "name": "Fly by night",
-                "duration": 20,
-                "color": "yellow"
             }
         ]
     },
