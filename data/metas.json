@@ -452,18 +452,13 @@
         "name": "Skywatch Archipelago",
         "phases": [
             {
-                "name": "",
-                "duration": 60,
-                "color": "transparent"
-            },
-            {
                 "name": "Unlocking the Wizard's Tower",
                 "duration": 25,
                 "color": "yellow"
             },
             {
                 "name": "",
-                "duration": 35,
+                "duration": 95,
                 "color": "transparent"
             }
         ]
