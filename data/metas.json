@@ -1,0 +1,513 @@
+[
+    {
+        "category": "icebrood saga",
+        "name": "Valle de Grothmar",
+        "phases": [
+            {
+                "name": "Pozos de légamos",
+                "duration": 20,
+                "color": "green"
+            },{
+                "name": "",
+                "duration": 15,
+                "color": "transparent"
+            },{
+                "name": "Concierto de metal",
+                "duration": 15,
+                "color": "red"
+            },{
+                "name": "",
+                "duration": 15,
+                "color": "transparent"
+            },{
+                "name": "Efigie",
+                "duration": 15,
+                "color": "cyan"
+            },
+            {
+                "name": "",
+                "duration": 13,
+                "color": "transparent"
+            },
+            {
+                "name": "Santuario maldito",
+                "duration": 22,
+                "color": "magenta"
+            },
+            {
+                "name": "",
+                "duration": 5,
+                "color": "transparent"
+            },
+        ]
+    },
+    {
+        "name": "Day and night",
+        "phases": [{
+                "name": "Night",
+                "duration": 25,
+                "color": "black"
+            },
+            {
+                "name": "Dawn",
+                "duration": 5,
+                "color": "yellow"
+            },
+            {
+                "name": "Day",
+                "duration": 70,
+                "color": "blue"
+            },
+            {
+                "name": "Dusk",
+                "duration": 5,
+                "color": "yellow"
+            },
+            {
+                "name": "Night",
+                "duration": 15,
+                "color": "black"
+            }
+        ],
+        "category": "Otros"
+    },
+    {
+        "name": "Dry Top",
+        "phases": [{
+                "name": "Crash Site",
+                "duration": 40,
+                "color": "red"
+            },
+            {
+                "name": "Sandstorm",
+                "duration": 20,
+                "color": "yellow"
+            },
+            {
+                "name": "Crash Site",
+                "duration": 40,
+                "color": "red"
+            },
+            {
+                "name": "Sandstorm",
+                "duration": 20,
+                "color": "yellow"
+            }
+        ],
+        "category": "Core"
+    },
+    {
+        "name": "Verdant Brink",
+        "phases": [{
+                "name": "",
+                "duration": 10,
+                "color": "transparent"
+            },
+            {
+                "name": "Night Bosses",
+                "duration": 20,
+                "color": "red"
+            },
+            {
+                "name": "Daytime",
+                "duration": 75,
+                "color": "blue"
+            },
+            {
+                "name": "Night",
+                "duration": 15,
+                "color": "black"
+            }
+        ],
+        "category": "Heart of Thorns"
+    },
+    {
+        "name": "Auric Basin",
+        "phases": [{
+                "name": "Pillars",
+                "duration": 45,
+                "color": "yellow"
+            },
+            {
+                "name": "Challenges",
+                "duration": 15,
+                "color": "magenta"
+            },
+            {
+                "name": "Octovine",
+                "duration": 20,
+                "color": "red"
+            },
+            {
+                "name": "Reset",
+                "duration": 10,
+                "color": "black"
+            },
+            {
+                "name": "Pillars",
+                "duration": 30,
+                "color": "yellow"
+            }
+        ],
+        "category": "Heart of Thorns"
+    },
+    {
+        "name": "Tangled Depths",
+        "phases": [{
+                "name": "",
+                "duration": 25,
+                "color": "transparent"
+            },
+            {
+                "name": "Prep",
+                "duration": 5,
+                "color": "green"
+            },
+            {
+                "name": "Chak Gerent",
+                "duration": 20,
+                "color": "magenta"
+            },
+            {
+                "name": "Help the Outposts",
+                "duration": 70,
+                "color": "yellow"
+            }
+        ],
+        "category": "Heart of Thorns"
+    },
+    {
+        "name": "Dragon's Stand",
+        "phases": [{
+                "name": "",
+                "duration": 90,
+                "color": "transparent"
+            },
+            {
+                "name": "Start",
+                "duration": 30,
+                "color": "red"
+            }
+        ],
+        "category": "Heart of Thorns"
+    },
+    {
+        "name": "Lake Doric",
+        "phases": [{
+                "name": "New Loamhurst",
+                "duration": 30,
+                "color": "yellow"
+            },
+            {
+                "name": "Noran's Homestead",
+                "duration": 30,
+                "color": "green"
+            },
+            {
+                "name": "Saidra's Haven",
+                "duration": 45,
+                "color": "cyan"
+            },
+            {
+                "name": "New Loamhurst",
+                "duration": 15,
+                "color": "yellow"
+            }
+        ],
+        "category": "Heart of Thorns"
+    },
+    {
+        "name": "Crystal Oasis",
+        "phases": [{
+                "name": "",
+                "duration": 5,
+                "color": "transparent"
+            },
+            {
+                "name": "Rounds 1 to 3",
+                "duration": 16,
+                "color": "yellow"
+            },
+            {
+                "name": "Pinata / Reset",
+                "duration": 9,
+                "color": "magenta"
+            },
+            {
+                "name": "",
+                "duration": 90,
+                "color": "transparent"
+            }
+        ],
+        "category": "Path of Fire"
+    },
+    {
+        "name": "Desert Highlands",
+        "phases": [{
+                "name": "",
+                "duration": 60,
+                "color": "transparent"
+            },
+            {
+                "name": "Buried Treasure",
+                "duration": 20,
+                "color": "yellow"
+            },
+            {
+                "name": "",
+                "duration": 40,
+                "color": "transparent"
+            }
+        ],
+        "category": "Path of Fire"
+    },
+    {
+        "name": "Elon Riverlands",
+        "phases": [{
+                "name": "Doppelganger",
+                "duration": 5,
+                "color": "magenta"
+            },
+            {
+                "name": "",
+                "duration": 85,
+                "color": "transparent"
+            },
+            {
+                "name": "The Path to Ascension: Augury Rock",
+                "duration": 30,
+                "color": "red"
+            }
+        ],
+        "category": "Path of Fire"
+    },
+    {
+        "name": "The Desolation",
+        "phases": [{
+                "name": "",
+                "duration": 30,
+                "color": "transparent"
+            },
+            {
+                "name": "Junundu Rising",
+                "duration": 20,
+                "color": "yellow"
+            },
+            {
+                "name": "",
+                "duration": 10,
+                "color": "transparent"
+            },
+            {
+                "name": "Maws of Torment",
+                "duration": 20,
+                "color": "magenta"
+            },
+            {
+                "name": "",
+                "duration": 10,
+                "color": "transparent"
+            },
+            {
+                "name": "Junundu Rising",
+                "duration": 20,
+                "color": "yellow"
+            },
+            {
+                "name": "",
+                "duration": 10,
+                "color": "transparent"
+            }
+        ],
+        "category": "Path of Fire"
+    },
+    {
+        "name": "Domain of Vabbi",
+        "phases": [{
+                "name": "Forged with Fire",
+                "duration": 30,
+                "color": "red"
+            },
+            {
+                "name": "Serpents' Ire",
+                "duration": 30,
+                "color": "magenta"
+            },
+            {
+                "name": "Forged with Fire",
+                "duration": 30,
+                "color": "red"
+            },
+            {
+                "name": "",
+                "duration": 30,
+                "color": "transparent"
+            }
+        ],
+        "category": "Path of Fire"
+    },
+    {
+        "name": "Domain of Istan",
+        "phases": [{
+                "name": "Palawadan",
+                "duration": 15,
+                "color": "yellow"
+            },
+            {
+                "name": "",
+                "duration": 90,
+                "color": "transparent"
+            },
+            {
+                "name": "Palawadan",
+                "duration": 15,
+                "color": "yellow"
+            }
+        ],
+        "category": "Path of Fire"
+    },
+    {
+        "name": "Jahai Bluffs",
+        "phases": [{
+                "name": "",
+                "duration": 60,
+                "color": "transparent"
+            },
+            {
+                "name": "Escorts",
+                "duration": 15,
+                "color": "yellow"
+            },
+            {
+                "name": "Death-Branded Shatterer",
+                "duration": 15,
+                "color": "red"
+            },
+            {
+                "name": "",
+                "duration": 30,
+                "color": "transparent"
+            }
+        ],
+        "category": "Path of Fire"
+    },
+    {
+        "name": "Ley-Line Anomaly",
+        "phases": [{
+                "name": "Accumulating",
+                "duration": 20,
+                "color": "green"
+            },
+            {
+                "name": "Spawn",
+                "duration": 20,
+                "color": "yellow"
+            },
+            {
+                "name": "Accumulating",
+                "duration": 80,
+                "color": "green"
+            }
+        ],
+        "category": "Otros"
+    },
+    {
+        "category": "End of Dragons",
+        "name": "Dragon's end",
+        "phases": [
+            {
+                "name": "Preparaciones",
+                "duration": 5,
+                "color": "blue"
+            },
+            {
+                "name": "Jade Maw",
+                "duration": 8,
+                "color": "magenta"
+            },
+            {
+                "name": "Preparaciones",
+                "duration": 32,
+                "color": "blue"
+            },
+            {
+                "name": "Jade Maw",
+                "duration": 8,
+                "color": "magenta"
+            },
+            {
+                "name": "Preparaciones",
+                "duration": 7,
+                "color": "blue"
+            },
+            {
+                "name": "Batalla por el mar de jade",
+                "duration": 60,
+                "color": "yellow"
+            },
+        ]
+    },
+    {
+        "category": "Secrets of the Obscure",
+        "name": "Skywatch Archipelago",
+        "phases": [
+            {
+                "name": "",
+                "duration": 60,
+                "color": "transparent"
+            },
+            {
+                "name": "Unlocking the Wizard's Tower",
+                "duration": 25,
+                "color": "yellow"
+            },
+            {
+                "name": "",
+                "duration": 35,
+                "color": "transparent"
+            }
+        ]
+    },
+    {
+        "category": "Secrets of the Obscure",
+        "name": "Wizard's Tower",
+        "phases": [
+            {
+                "name": "Fly by night",
+                "duration": 20,
+                "color": "yellow"
+            },
+            {
+                "name": "",
+                "duration": 40,
+                "color": "transparent"
+            },
+            {
+                "name": "Target Practice",
+                "duration": 40,
+                "color": "transparent"
+            },
+            {
+                "name": "Fly by night",
+                "duration": 20,
+                "color": "yellow"
+            }
+        ]
+    },
+    {
+        "category": "Secrets of the Obscure",
+        "name": "Amnytas",
+        "phases": [
+            {
+                "name": "Defense of Amnytas",
+                "duration": 25,
+                "color": "red"
+            },
+            {
+                "name": "",
+                "duration": 35,
+                "color": "transparent"
+            },
+        ]
+    },
+]
