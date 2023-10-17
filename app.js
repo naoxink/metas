@@ -76,6 +76,7 @@
             next.time = `${nextHour}:${nextMinute}`
           }
         })
+        console.log(map.name, current, next)
         html.push(getMetaHtml(map.name, current, next))
       })
       regionsHtml.push(getRegionContainer(region, html.join('')))
